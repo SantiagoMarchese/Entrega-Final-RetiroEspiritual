@@ -1,21 +1,13 @@
-/*descoracion de foto*/
-.foto {
-  text-align: center;
-  margin-top: 3%;
-  width: auto;
-}
 /*descoracion de tirululos o textos*/
-h1{
+h1 {
   color: rgb(63, 11, 142);
   text-align: center;
 }
 
-h2{
-  margin-top: 25px;
-  display: flex;
-}
+
+
 /*css al formulario*/
-.formulario-foto{
+.formulario-foto {
   background-image: url(../img/madera-fondo-min.jpg);
   margin-top: 5px;
 }
@@ -26,112 +18,193 @@ h2{
   margin-top: 1px;
   border: 0px solid black;
   border-style: dashed;
+
+}
+
+.texto-informativo {
+  display: flex;
+}
+
+.texto-lugares {
+  text-align: center;
+  text-decoration-color: darkorange;
   
 }
 
-.texto-informativo{
-  display: flex;
+/*color de fondo y foto*/
+.fondo {
+  background-color: #81c9fa;
+  margin: 0px; 
+  font-family: sans-serif;
+  position: relative;
+  padding-bottom: 2.5em;
+  min-height: 100vh;
 }
-
-/*modificamos pie*/
-.footer-redes{ 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: rgba(14, 14, 14, 0.953);
-}
-/*color de fondo*/
-.fondo{
-  background-color: #15ab92;
+.fondo-foto {
+  background-image: url(../img/fondo-selva-min.jpg);
+  margin: 0px;
+  font-family: sans-serif;
+  position: relative;
+  padding-bottom: 2.5em;
+  min-height: 100vh;
 }
 
 /*css al mapa*/
-.mapa { 
+.mapa {
   text-align: center;
   margin-top: 20px;
 }
 
-/*le damos espacio a los links, de la pagina link*/  
-.boton-web{
+/*le damos espacio a los links, de la pagina link*/
+.boton-web {
   margin-top: 10px;
+}
+
+.fondo-redes {
+  background-color: #003785;
+  border-style: none;
+}
+/*animacion a los titulos*/
+.animacion{
+  text-align: center;
+  color:  rgb(63, 11, 142);
+  animation-name: animacion;
+  animation-duration: 4s;
+  animation-iteration-count: initial;
+  animation-delay: 0s;
+}
+
+@keyframes animacion {
+  0%{
+      color:  rgb(63, 11, 142);
+      font-size: 30px;
+  }
 }
 
 
 
 
-
-
-/*aplicamos grid*/
-.grid-container{
-  background-color: #1e91ed;
+/*aplicando grid al inicio*/
+.grid {
   justify-content: space-evenly;
   margin-top: 40px;
   display: grid;
   /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(2, 48%);
   /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
-  grid-template-rows: repeat(1, autopx);
+  grid-template-rows: repeat(3, autopx);
   /*establecemos el espaciado entre cajas*/
   gap: 1px 1px;
-  
+  grid-template-areas:
+  "texto-1 texto-2"
+  "foto texto-2"
+  "foto texto-2";
+}
+
+.texto-1 {
+  grid-area: texto-1 ;
+}
+
+.foto-inicio-1 {
+  grid-area: foto ;
+}
+
+.texto-inicio-2 {
+  grid-area: texto-2 ;
+}
+
+.texto-inicio-3 { 
+
+  grid-area: texto-3 ;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+/*aplicamos grid a la pagina lugares*/
+.grid-container {
+  justify-content: space-evenly;
+  margin-top: 10px;
+  display: grid;
+  /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+  grid-template-columns: repeat(2, 35%);
+  /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+  grid-template-rows: repeat(2, autopx);
+  /*establecemos el espaciado entre cajas*/
+  gap: 1px 1px;
+
   grid-template-areas: 
-  "noticia-1 noticia-2 noticia-3 noticia-4"
-  }
+    "noticia-1 noticia-2" 
+    "noticia-3 noticia-4";
+}
 
 /*activamos las areas a acomodora*/
-.noticia-1{
+.noticia-1 {
   grid-area: noticia-1;
-  background-color: #1e91ed ;
 }
-.noticia-2{
+
+.noticia-2 {
   grid-area: noticia-2;
-  background-color: #1e91ed;
-  
 }
-.noticia-3{
+
+.noticia-3 {
   grid-area: noticia-3;
-  background-color: #1e91ed;
 }
-.noticia-4{
+
+.noticia-4 {
   grid-area: noticia-4;
-  background-color: #1e91ed ;
 }
 
 /*para modificar la vista a celu, tablet,etc*/
-@media screen and (max-width: 768px){ 
-  .grid-container{
-      background-color: rgb(3, 56, 75);
-      border: px solid black;
-      display: grid;
-      /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
-      grid-template-columns: repeat(2, 40%);
-      /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
-      grid-template-rows: repeat(4, autopx);
-      /*establecemos el espaciado entre cajas*/
-      gap: 1px 1px;
-      
-      grid-template-areas: 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    background-color: rgb(3, 56, 75);
+    border: px solid black;
+    display: grid;
+    /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+    grid-template-columns: repeat(2, 32%);
+    /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+    grid-template-rows: repeat(4, autopx);
+    /*establecemos el espaciado entre cajas*/
+    gap: 1px 1px;
+
+    grid-template-areas:
       "noticia-1 noticia-2"
       "noticia-1 noticia-2"
       "noticia-3 noticia-4"
       "noticia-3 noticia-4"
-      ;
+    ;
   }
 }
+
 /*activamos las areas a acomodora*/
-.noticia-1{
+.noticia-1 {
   grid-area: noticia-1;
-  background-color: #1e91ed;
 }
-.noticia-2{
+
+.noticia-2 {
   grid-area: noticia-2;
-  background-color: #1e91ed;
 }
-.noticia-3{
+
+.noticia-3 {
   grid-area: noticia-3;
-  background-color: #1e91ed;
 }
-.noticia-4{
+
+.noticia-4 {
   grid-area: noticia-4;
-  background-color: #1e91ed;
+}
+
+
+
+/*footer*/
+.grid-footer { 
+  background-color: #003785 ;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
