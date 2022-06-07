@@ -14,7 +14,11 @@ h2{
   margin-top: 25px;
   display: flex;
 }
-
+/*css al formulario*/
+.formulario-foto{
+  background-image: url(../img/madera-fondo-min.jpg);
+  margin-top: 5px;
+}
 
 .texto-texto {
   text-align: center;
